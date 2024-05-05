@@ -47,7 +47,6 @@
               <path d="M680 112.187C680 137.954 653.568 161.688 609.146 180.61C653.568 211.682 680 250.658 680 292.973C680 335.869 652.836 375.335 607.304 406.613C652.836 425.66 680 449.692 680 475.813C680 537.649 527.777 587.776 340 587.776C152.223 587.776 0 537.649 0 475.813C0 449.692 27.1636 425.66 72.6961 406.613C27.1636 375.335 0 335.869 0 292.973C0 250.658 26.4319 211.682 70.854 180.61C26.4319 161.688 0 137.954 0 112.187C0 50.3515 152.223 0.223633 340 0.223633C527.777 0.223633 680 50.3515 680 112.187Z"/>
               </clippath>
               <image xlink:href="/img/hero.jpg" width="100%" height="100%" clip-path="url(#hero)"/>
-              </defs>
             </svg>
             <img class="hero__image hero__image_right" src="/img/hero-right.jpg" alt="Цветы в конейнере">
           </figure>
@@ -68,8 +67,8 @@
           <fieldset class="filter__group filter__group_choices">
             <div class="filter__choices choices">
               <button class="filter__select choices__btn">Цена</button>
-              <div class="choices__box">
-                <fieldset class="filter__group">
+              <div class="choices__box filter__choices-box">
+                <fieldset class="filter__price">
                   <input class="filter__input-price" type="text" placeholder="от">
                   <input class="filter__input-price" type="text" placeholder="до">
                 </fieldset>
@@ -77,7 +76,7 @@
             </div>
             <div class="filter__choices choices">
               <button class="filter__select choices__btn">Тип товара</button>
-              <div class="choices__box">
+              <div class="choices__box filter__choices-box">
                 <ul class="filter__type-list">
                   <li class="filter__type-item">
                     <button class="filter__type-button">Монобукеты</button>
@@ -110,10 +109,10 @@
                 <img src="img/01.jpg" alt="Авторский букет из роз, диантусов и сухоцветов" class="card__image">
                 <div class="card__content">
                   <h3 class="card__title">Авторский букет из роз, диантусов и сухоцветов</h3>
-                  <p class="card__date">сегодня в 14:00</p>
+                  <p class="card__date">сегодня&nbsp;в&nbsp;14:00</p>
                   <button class="card__button">
-                    <span class="card__price">3000 ₽</span>
-                    <span class="card__button-text">в корзину</span>
+                    <span class="card__price">3000&nbsp;₽</span>
+                    <span class="card__button-text">в&nbsp;корзину</span>
                   </button>
                 </div>
               </article>
@@ -136,11 +135,13 @@
                 <img src="img/03.jpg" alt="Авторский букет из роз и сухоцветов" class="card__image">
                 <div class="card__content">
                   <h3 class="card__title">Авторский букет из роз и сухоцветов</h3>
-                  <p class="card__date">сегодня в 14:00</p>
-                  <button class="card__button">
-                    <span class="card__price">2200 ₽</span>
-                    <span class="card__button-text">в корзину</span>
-                  </button>
+                  <div class="card__footer">
+                    <p class="card__date">сегодня в 14:00</p>
+                    <button class="card__button">
+                      <span class="card__price">2200 ₽</span>
+                      <span class="card__button-text">в корзину</span>
+                    </button>
+                  </div>
                 </div>
               </article>
             </li>
@@ -189,7 +190,7 @@
 
       <section class="subscribe">
         <div class="container">
-          <h2 class="subscribe__title">Подпишись на рассылку</h2>
+          <h2 class="subscribe__title">Подпишись на&nbsp;рассылку</h2>
           <form class="subscribe__form" action="#">
             <input type="email" name="email" placeholder="E-mail" class="subscribe__input">
             <button class="subscribe__button">

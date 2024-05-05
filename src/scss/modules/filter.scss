@@ -1,4 +1,5 @@
 @use '../varibles' as *;
+@use '../media' as *;
 
 .filter {
 
@@ -6,11 +7,13 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 30px;
+    gap: 32px;
+    flex-wrap: wrap;
   }
 
   &__group {
     display: flex;
+    flex-wrap: wrap;
     border: 0;
     padding: 0;
     margin: 0;
@@ -18,6 +21,10 @@
 
     &_choices {
       gap: 64px;
+
+      @include mobile {
+        gap: 40px;
+      }
     }
   }
 
@@ -36,6 +43,16 @@
     background-size: 40px;
     background-repeat: no-repeat;
     cursor: pointer;
+    min-height: 72px;
+    display: flex;
+    align-items: center;
+
+    @include mobile {
+      padding: 10px 12px 10px 40px;
+      background-position: center left 12px;
+      background-size: 24px;
+      min-height: 40px;
+    }
 
     &_flower {
       background-image: url('/img/flowers.png');
@@ -79,15 +96,41 @@
     }
   }
 
+  &__price {
+    border: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 8px; 
+  }
+
+  &__choices-box {
+    border-radius: 12px;
+    padding: 24px;
+    background: $white;
+  }
+
   &__input-price {
+    border-radius: 32px;
+    padding: 8px 16px;
+    width: 110px;
+    height: 40px;
+    background: $bg;
+    border: none;
   }
 
   &__type-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   &__type-item {
   }
 
   &__type-button {
+    &:hover {
+      color: $orange;
+    }
   }
 }
