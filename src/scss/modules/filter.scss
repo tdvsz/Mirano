@@ -113,6 +113,10 @@
     border-radius: 12px;
     padding: 24px;
     background-color: $white;
+
+    &_type {
+      padding: 16px;
+    }
   }
 
   &__input-price {
@@ -122,20 +126,30 @@
     height: 40px;
     background-color: $bg;
     border: none;
+
+    @include mobile {
+      width: 80px;
+    }
   }
 
   &__type-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
   }
 
   &__type-item {
+    margin-bottom: 8px;
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__type-button {
     white-space: nowrap;
     &:hover {
+      color: $light-orange;
+    }
+    &_active {
       color: $orange;
     }
   }
