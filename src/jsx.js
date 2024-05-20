@@ -24,6 +24,9 @@ export default function jsx(tag, attributes = {}, ...children) {
     if (typeof child === 'string' || typeof child === 'number') {
       element.append(document.createTextNode(child.toString()));
     }
+    else if (Array.isArray(child)) {
+      child.forEach((innerChild) => element.append(innerChild));
+    }
     else {
       element.append(child);
     }
